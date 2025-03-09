@@ -12,7 +12,7 @@ const Transaction = ({transaction}) => {
    
   return (
     <div>
-        <li className={`group relative flex justify-between items-center  m-2 p-2 bg-white px-20 border-r-4 ${getBorderColor(transaction.amount)}`} >
+        <li className={`group relative flex justify-between items-center  w-64 p-2 bg-white px-20 border-r-4 ${getBorderColor(transaction.amount)}`} >
 
                       <button className='absolute left-[-40px] top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ' onClick={()=>deleteTransaction(transaction.id)}>❌</button>
                       <span className='text-left'>{transaction.text}</span>

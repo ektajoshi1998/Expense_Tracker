@@ -10,14 +10,19 @@ const History = () => {
   }
 
   return (
-    <div className='flex flex-col'>
-        <h2 className='text-lg'>History</h2>
-        <div >
+     
+      <div className='flex flex-col '>
+<h2 className='text-lg font-semibold w-64 text-center pt-4'>History</h2>
+{ transactions.length>0 ?
+       (   <div >
             <ul>
               {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction}/>))}
               </ul>
-        </div>  
-    </div>
+        </div> 
+      ): 
+      <p className=' w-64 text-center text-sm p-2 pb-4'>No transaction available</p>} 
+        </div>
+
   )
 }
 

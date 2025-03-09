@@ -15,12 +15,14 @@ const Income = () => {
       const expense = amount.filter(item=>item<0).reduce(((acc,item)=>acc+item),0)* -1;
       // console.log(expense)
   return (
-    <div className=' flex flex-row space-x-8 bg-white text-black px-12 py-6 '>
-      <div >
+    // <div className=' flex flex-row space-x-8 bg-white text-black px-20 py-6 '>
+    <div className='flex justify-between w-64 bg-white text-black p-4 mt-4'>
+      <div className='w-1/2 text-center'>
         <h2>Income</h2>
         <p>+₹{income}</p>
       </div>
-      <div>
+      
+      <div className='w-1/2 text-center'>
         <h2>Expense</h2>
         <p>-₹{expense}</p>
       </div>
